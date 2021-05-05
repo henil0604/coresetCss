@@ -1,0 +1,31 @@
+@use "../vars" as *;
+
+@each $key, $value in $colors-normal {
+  .color-#{$key} {
+    color: #{$value};
+  }
+}
+
+@each $key, $value in $colors-light {
+  .color-light-#{$key} {
+    color: #{$value};
+  }
+}
+
+@each $key, $value in $colors-lighter {
+  .color-lighter-#{$key} {
+    color: #{$value};
+  }
+}
+
+@each $key, $value in $colors-dark {
+  .color-dark-#{$key} {
+    color: #{$value};
+  }
+}
+
+@each $key, $value in $colors-darker {
+  .color-darker-#{$key} {
+    color: #{$value};
+  }
+}

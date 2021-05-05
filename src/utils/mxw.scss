@@ -1,0 +1,7 @@
+@use '../vars' as *;
+
+@each $class, $val in $utils-width {
+  .mxw-#{$class} {
+    max-width: #{$val};
+  }
+}

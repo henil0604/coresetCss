@@ -1,0 +1,7 @@
+@use '../vars' as *;
+
+@each $class, $val in $utils-height {
+  .mnh-#{$class} {
+    min-height: #{$val};
+  }
+}

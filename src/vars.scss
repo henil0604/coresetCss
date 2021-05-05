@@ -1,0 +1,366 @@
+@use 'sass:map';
+
+$colors-normal: (
+  "primary": #1d6efd,
+  "secondary": #6c757d,
+  "success": #198754,
+  "danger": #dc3545,
+  "warning": #ffc107,
+  "info": #0dcaf0,
+  "light": #f8f9fa,
+  "dark": #212529,
+  "blue": #0d6efd,
+  "indigo": #6610f2,
+  "purple": #6f42c1,
+  "pink": #d63384,
+  "red": #dc3545,
+  "orange": #fd7e14,
+  "yellow": #ffc107,
+  "green": #198754,
+  "teal": #20c997,
+  "cyan": #0dcaf0,
+  "gray": #adb5bd,
+  "black": #000000,
+  "white": #ffffff,
+  "transparent": transparent,
+);
+
+$colors-light: (
+  "blue": #6ea8fe,
+  "indigo": #a370f7,
+  "purple": #a98eda,
+  "pink": #e685b5,
+  "red": #ea868f,
+  "orange": #feb272,
+  "yellow": #ffda6a,
+  "green": #75b798,
+  "teal": #79dfc1,
+  "cyan": #6edff6,
+  "gray": #dee2e6,
+);
+
+$colors-lighter: (
+  "blue": #cfe2ff,
+  "indigo": #e0cffc,
+  "purple": #e2d9f3,
+  "pink": #f7d6e6,
+  "red": #f8d7da,
+  "orange": #ffe5d0,
+  "yellow": #fff3cd,
+  "green": #d1e7dd,
+  "teal": #d2f4ea,
+  "cyan": #cff4fc,
+  "gray": #f8f9fa,
+);
+
+$colors-dark: (
+  "blue": #084298,
+  "indigo": #3d0a91,
+  "purple": #432874,
+  "pink": #801f4f,
+  "red": #842029,
+  "orange": #984c0c,
+  "yellow": #997404,
+  "green": #0f5132,
+  "teal": #13795b,
+  "cyan": #087990,
+  "gray": #495057,
+);
+
+$colors-darker: (
+  "blue": #031633,
+  "indigo": #140330,
+  "purple": #160d27,
+  "pink": #2b0a1a,
+  "red": #2c0b0e,
+  "orange": #331904,
+  "yellow": #332701,
+  "green": #051b11,
+  "teal": #06281e,
+  "cyan": #032830,
+  "gray": #212529,
+);
+
+$utils-width: (
+  "p100": 100%,
+  "p75": 75%,
+  "p50": 50%,
+  "p25": 25%,
+  "50": 50px,
+  "100": 100px,
+  "200": 200px,
+  "300": 300px,
+  "400": 400px,
+  "500": 500px,
+  "100vw": 100vw,
+  "fit": fit-content,
+);
+
+$utils-height: (
+  "p100": 100%,
+  "p75": 75%,
+  "p50": 50%,
+  "p25": 25%,
+  "50": 50px,
+  "100": 100px,
+  "200": 200px,
+  "300": 300px,
+  "400": 400px,
+  "500": 500px,
+  "100vh": 100vh,
+  "fit": fit-content,
+);
+
+$utils-margin-size: (
+  "0": 0,
+  "1": 5px,
+  "2": 10px,
+  "3": 20px,
+  "4": 30px,
+  "5": 40px,
+);
+
+$utils-padding-size: (
+  "0": 0,
+  "1": 5px,
+  "2": 10px,
+  "3": 20px,
+  "4": 30px,
+  "5": 40px,
+);
+
+$utils-margin: (
+  "0": (
+    "value": map.get($utils-margin-size, "0"),
+    "type": "both",
+  ),
+  "1": (
+    "value": map.get($utils-margin-size, "1"),
+    "type": "both",
+  ),
+  "2": (
+    "value": map.get($utils-margin-size, "2"),
+    "type": "both",
+  ),
+  "3": (
+    "value": map.get($utils-margin-size, "3"),
+    "type": "both",
+  ),
+  "4": (
+    "value": map.get($utils-margin-size, "4"),
+    "type": "both",
+  ),
+  "5": (
+    "value": map.get($utils-margin-size, "5"),
+    "type": "both",
+  ),
+  "y-0": (
+    "value": map.get($utils-margin-size, "0"),
+    "type": "tb",
+  ),
+  "y-1": (
+    "value": map.get($utils-margin-size, "1"),
+    "type": "tb",
+  ),
+  "y-2": (
+    "value": map.get($utils-margin-size, "2"),
+    "type": "tb",
+  ),
+  "y-3": (
+    "value": map.get($utils-margin-size, "3"),
+    "type": "tb",
+  ),
+  "y-4": (
+    "value": map.get($utils-margin-size, "4"),
+    "type": "tb",
+  ),
+  "y-5": (
+    "value": map.get($utils-margin-size, "5"),
+    "type": "tb",
+  ),
+  "x-0": (
+    "value": map.get($utils-margin-size, "0"),
+    "type": "lr",
+  ),
+  "x-1": (
+    "value": map.get($utils-margin-size, "1"),
+    "type": "lr",
+  ),
+  "x-2": (
+    "value": map.get($utils-margin-size, "2"),
+    "type": "lr",
+  ),
+  "x-3": (
+    "value": map.get($utils-margin-size, "3"),
+    "type": "lr",
+  ),
+  "x-4": (
+    "value": map.get($utils-margin-size, "4"),
+    "type": "lr",
+  ),
+  "x-5": (
+    "value": map.get($utils-margin-size, "5"),
+    "type": "lr",
+  ),
+);
+
+$utils-padding: (
+  "0": (
+    "value": map.get($utils-padding-size, "0"),
+    "type": "both",
+  ),
+  "1": (
+    "value": map.get($utils-padding-size, "1"),
+    "type": "both",
+  ),
+  "2": (
+    "value": map.get($utils-padding-size, "2"),
+    "type": "both",
+  ),
+  "3": (
+    "value": map.get($utils-padding-size, "3"),
+    "type": "both",
+  ),
+  "4": (
+    "value": map.get($utils-padding-size, "4"),
+    "type": "both",
+  ),
+  "5": (
+    "value": map.get($utils-padding-size, "5"),
+    "type": "both",
+  ),
+  "y-0": (
+    "value": map.get($utils-padding-size, "0"),
+    "type": "tb",
+  ),
+  "y-1": (
+    "value": map.get($utils-padding-size, "1"),
+    "type": "tb",
+  ),
+  "y-2": (
+    "value": map.get($utils-padding-size, "2"),
+    "type": "tb",
+  ),
+  "y-3": (
+    "value": map.get($utils-padding-size, "3"),
+    "type": "tb",
+  ),
+  "y-4": (
+    "value": map.get($utils-padding-size, "4"),
+    "type": "tb",
+  ),
+  "y-5": (
+    "value": map.get($utils-padding-size, "5"),
+    "type": "tb",
+  ),
+  "x-0": (
+    "value": map.get($utils-padding-size, "0"),
+    "type": "lr",
+  ),
+  "x-1": (
+    "value": map.get($utils-padding-size, "1"),
+    "type": "lr",
+  ),
+  "x-2": (
+    "value": map.get($utils-padding-size, "2"),
+    "type": "lr",
+  ),
+  "x-3": (
+    "value": map.get($utils-padding-size, "3"),
+    "type": "lr",
+  ),
+  "x-4": (
+    "value": map.get($utils-padding-size, "4"),
+    "type": "lr",
+  ),
+  "x-5": (
+    "value": map.get($utils-padding-size, "5"),
+    "type": "lr",
+  ),
+);
+
+$utils-display: (
+  "flex": (
+    "display": "flex",
+  ),
+  "flex-center": (
+    "display": "flex",
+    "justify-content": "center",
+    "align-items": "center",
+  ),
+  "flex-align-center": (
+    "display": "flex",
+    "align-items": "center",
+  ),
+  "flex-justify-center": (
+    "display": "flex",
+    "justify-content": "center",
+  ),
+  "flex-direction-row": (
+    "display": "flex",
+    "flex-direction": "row",
+  ),
+  "flex-direction-column": (
+    "display": "flex",
+    "flex-direction": "column",
+  ),
+  "block": (
+    "display": "block",
+  ),
+  "none": (
+    "display": "none",
+  ),
+);
+
+$utils-fs: (
+  "small": "small",
+  "medium": "medium",
+  "large": "large",
+  "1": 10px,
+  "2": 14px,
+  "3": 17px,
+  "4": 20px,
+  "5": 24px,
+  "6": 28px,
+  "7": 31px,
+  "8": 35px,
+  "9": 40px,
+  "10": 44px,
+);
+
+$utils-br: (
+  "0": 0px,
+  "1": 5px,
+  "2": 10px,
+  "3": 14px,
+  "4": 18px,
+  "5": 22px,
+  "6": 25px,
+  "25p": 25%,
+  "50p": 50%,
+  "75p": 75%,
+  "100p": 100%,
+);
+
+$color-contrast: (
+  "primary": white,
+  "secondary": #fafafa,
+  "success": white,
+  "danger": white,
+  "warning": white,
+  "info": white,
+  "light": black,
+  "dark": white,
+  "blue": white,
+  "indigo": white,
+  "purple": white,
+  "red": white,
+  "orange": white,
+  "yellow": white,
+  "green": white,
+  "teal": white,
+  "cyan": white,
+  "gray": white,
+  "white": black,
+  "black": white,
+);

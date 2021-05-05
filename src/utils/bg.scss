@@ -1,0 +1,31 @@
+@use "../vars" as *;
+
+@each $key, $value in $colors-normal {
+  .bg-#{$key} {
+    background-color: #{$value};
+  }
+}
+
+@each $key, $value in $colors-light {
+  .bg-light-#{$key} {
+    background-color: #{$value};
+  }
+}
+
+@each $key, $value in $colors-lighter {
+  .bg-lighter-#{$key} {
+    background-color: #{$value};
+  }
+}
+
+@each $key, $value in $colors-dark {
+  .bg-dark-#{$key} {
+    background-color: #{$value};
+  }
+}
+
+@each $key, $value in $colors-darker {
+  .bg-darker-#{$key} {
+    background-color: #{$value};
+  }
+}

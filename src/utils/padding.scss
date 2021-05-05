@@ -1,0 +1,19 @@
+@use '../vars' as *;
+
+@each $key, $value in $utils-padding {
+  @if (map-get($value, "type") == "both") {
+    .p-#{$key} {
+      padding: #{map-get($value, "value")};
+    }
+  } @else if(map-get($value, "type") == "tb") {
+    .p#{$key} {
+      padding-top: #{map-get($value, "value")};
+      padding-bottom: #{map-get($value, "value")};
+    }
+  } @else if(map-get($value, "type") == "lr") {
+    .p#{$key} {
+      padding-left: #{map-get($value, "value")};
+      padding-right: #{map-get($value, "value")};
+    }
+  }
+}

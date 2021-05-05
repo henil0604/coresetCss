@@ -1,0 +1,21 @@
+@use "../vars" as *;
+
+@mixin color-normal($key) {
+  color: map-get($map: $colors-normal, $key: $key);
+}
+
+@mixin color-light($key) {
+  color: map-get($map: $colors-light, $key: $key);
+}
+
+@mixin color-lighter($key) {
+  color: map-get($map: $colors-lighter, $key: $key);
+}
+
+@mixin color-dark($key) {
+  color: map-get($map: $colors-dark, $key: $key);
+}
+
+@mixin color-darker($key) {
+  color: map-get($map: $colors-darker, $key: $key);
+}

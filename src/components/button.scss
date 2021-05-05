@@ -1,0 +1,55 @@
+@use '../vars' as *;
+@use '../utils' as *;
+@use '../mixin/bg' as *;
+@use '../mixin/color' as *;
+
+.btn {
+  @extend .px-4;
+  @extend .py-2;
+  @extend .cursor-pointer;
+  @extend .bd-2px-transparent;
+  @extend .br-1;
+  @extend .trans-2;
+  @extend .fs-2;
+
+  border: 2px solid transparent;
+  color: black;
+  background-color: transparent;
+
+  @each $color, $value in $colors-normal {
+    &.btn-#{$color} {
+      background-color: #{$value};
+
+      @extend .bd-3px-#{$color};
+
+      @if map-get($color-contrast, $color) != "null" {
+        color: #{map-get($color-contrast, $color)};
+      } @else {
+        color: black;
+      }
+
+      &.inv-color {
+        color: invert($value);
+      }
+
+      &:hover {
+        background-color: darken($color: $value, $amount: 10%);
+        border: 3px solid darken($color: $value, $amount: 10%);
+      }
+
+      &:focus {
+        box-shadow: 0 0 1px 4px #{lighten($value, 30%)};
+      }
+    }
+
+    &.btn-sm {
+      font-size: 12px;
+      padding: 5px 5px;
+    }
+
+    &.btn-lg {
+      padding: 12px 35px;
+      font-size: 20px;
+    }
+  }
+}

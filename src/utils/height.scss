@@ -1,0 +1,7 @@
+@use '../vars' as *;
+
+@each $key, $value in $utils-height {
+  .h-#{$key} {
+    height: #{$value};
+  }
+}

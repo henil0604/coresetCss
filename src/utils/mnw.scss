@@ -1,0 +1,7 @@
+@use '../vars' as *;
+
+@each $class, $val in $utils-width {
+  .mnw-#{$class} {
+    min-width: #{$val};
+  }
+}

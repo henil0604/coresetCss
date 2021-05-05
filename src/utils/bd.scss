@@ -1,0 +1,41 @@
+@use '../vars' as *;
+
+@each $color, $val in $colors-normal {
+  @for $i from 1 through 10 {
+    .bd-#{$i}px-#{$color} {
+      border: #{$i}px solid $val;
+    }
+  }
+}
+
+@each $color, $val in $colors-light {
+  @for $i from 1 through 10 {
+    .bd-#{$i}px-light-#{$color} {
+      border: #{$i}px solid $val;
+    }
+  }
+}
+
+@each $color, $val in $colors-lighter {
+  @for $i from 1 through 10 {
+    .bd-#{$i}px-lighter-#{$color} {
+      border: #{$i}px solid $val;
+    }
+  }
+}
+
+@each $color, $val in $colors-dark {
+  @for $i from 1 through 10 {
+    .bd-#{$i}px-dark-#{$color} {
+      border: #{$i}px solid $val;
+    }
+  }
+}
+
+@each $color, $val in $colors-darker {
+  @for $i from 1 through 10 {
+    .bd-#{$i}px-darker-#{$color} {
+      border: #{$i}px solid $val;
+    }
+  }
+}

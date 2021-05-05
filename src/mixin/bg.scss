@@ -1,0 +1,21 @@
+@use "../vars" as *;
+
+@mixin bg-normal($key) {
+  background-color: map-get($map: $colors-normal, $key: $key);
+}
+
+@mixin bg-light($key) {
+  background-color: map-get($map: $colors-light, $key: $key);
+}
+
+@mixin bg-lighter($key) {
+  background-color: map-get($map: $colors-lighter, $key: $key);
+}
+
+@mixin bg-dark($key) {
+  background-color: map-get($map: $colors-dark, $key: $key);
+}
+
+@mixin bg-darker($key) {
+  background-color: map-get($map: $colors-darker, $key: $key);
+}

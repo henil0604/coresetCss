@@ -1,0 +1,9 @@
+@use '../vars' as *;
+
+@each $class, $valMap in $utils-display {
+  .display-#{$class} {
+    @each $property, $value in $valMap {
+      #{$property}: #{$value};
+    }
+  }
+}

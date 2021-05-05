@@ -1,0 +1,7 @@
+@use '../vars' as *;
+
+@each $key, $val in $utils-br {
+  .br-#{$key} {
+    border-radius: #{$val};
+  }
+}

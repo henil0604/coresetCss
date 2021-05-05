@@ -1,0 +1,19 @@
+@use '../vars' as *;
+
+@each $key, $value in $utils-margin {
+  @if (map-get($value, "type") == "both") {
+    .m-#{$key} {
+      margin: #{map-get($value, "value")};
+    }
+  } @else if(map-get($value, "type") == "tb") {
+    .m#{$key} {
+      margin-top: #{map-get($value, "value")};
+      margin-bottom: #{map-get($value, "value")};
+    }
+  } @else if(map-get($value, "type") == "lr") {
+    .m#{$key} {
+      margin-left: #{map-get($value, "value")};
+      margin-right: #{map-get($value, "value")};
+    }
+  }
+}
